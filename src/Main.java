@@ -83,7 +83,7 @@ public class Main {
                     if (condition.isEmpty()) {
                         System.out.println("Вы не ответили на вопрос." +
                                 "Вы НЕ можете кататься на аттракционе");
-                        } else if (condition.equals(conditionYes)) {
+                        } else if (condition.equalsIgnoreCase(conditionYes)) {
                         System.out.println("Можете кататься на аттракционе в сопровождении взрослого");
                     } else {
                         System.out.println("Вы НЕ можете кататься на аттракционе");
@@ -94,7 +94,7 @@ public class Main {
         byte seatingCapacity = 60;
         byte totalPlaces  = 102;
         int totalOccupiedPlaces;
-        System.out.print("\nЗадача 6.");
+        System.out.println("\nЗадача 6.");
         randomNum = rn.nextInt(0, totalPlaces + 1);
         totalOccupiedPlaces = randomNum;
         System.out.println("Количество занятых мест в вагоне = "+totalOccupiedPlaces);
@@ -105,9 +105,27 @@ public class Main {
             } else {
                 System.out.println("Количество свободных сидячих мест = "
                         + (seatingCapacity - totalOccupiedPlaces) + "\nКоличество свободных стоячих мест = " +
-                        (totalPlaces - seatingCapacity - totalOccupiedPlaces));
+                        (totalPlaces - seatingCapacity ));
             }
         } else{ System.out.println("Свободных мест нет");
+        }
+        // Задача 7.
+        int one;
+        int two;
+        int three;
+        System.out.print("\nЗадача 7.\nВведите число one: ");
+        one = input.nextInt();
+        System.out.print("Введите число two: ");
+        two = input.nextInt();
+        System.out.print("Введите число three: ");
+        three = input.nextInt();
+        if (one==two&& two==three) {System.out.println("Числа равны!");
+        }else if (one>two && one>three)
+        {System.out.println("Число one = "+one+" большее из введённых чисел");
+        } else if (two>one && two>three)
+        {System.out.println("Число two = "+two+" большее из введённых чисел");
+        }else {
+            System.out.println("Число three = " + three + " большее из введённых чисел");
         }
     }
 }
