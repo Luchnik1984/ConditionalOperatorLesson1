@@ -21,24 +21,24 @@ public class Main {
         //Задача 2.
         System.out.println("\nЗадача 2");
         // Генерирую случайное число от - 40 до 40:
-        int airTemp;
+        int airTemperature;
         byte min = -40;
         byte max = 40;
         Random rn = new Random();
-        int randomNum = rn.nextInt(max - min + 1) + min;
-        airTemp = randomNum;
-        if (airTemp < 5) {
-            System.out.println("На улице " + airTemp + " градусов," +
+        int randomNumber = rn.nextInt(max - min + 1) + min;
+        airTemperature = randomNumber;
+        if (airTemperature < 5) {
+            System.out.println("На улице " + airTemperature + " градусов," +
                     "нужно надеть шапку.");
         } else {
-            System.out.println("На улице " + airTemp + " градусов, можно идти без шапки!");
+            System.out.println("На улице " + airTemperature + " градусов, можно идти без шапки!");
         }
 
         // Задача 3.
         System.out.println("\nЗадача 3");
         int carSpeed;
-        randomNum = rn.nextInt(0, 200 + 1);
-        carSpeed = randomNum;
+        randomNumber = rn.nextInt(0, 200 + 1);
+        carSpeed = randomNumber;
         if (carSpeed > 60) {
             System.out.println("Если скорость " + carSpeed + " км/ч, " +
                     "то прийдётся заплатить штраф");
@@ -95,8 +95,8 @@ public class Main {
         byte totalPlaces  = 102;
         int totalOccupiedPlaces;
         System.out.println("\nЗадача 6.");
-        randomNum = rn.nextInt(0, totalPlaces + 1);
-        totalOccupiedPlaces = randomNum;
+        randomNumber = rn.nextInt(0, totalPlaces + 1);
+        totalOccupiedPlaces = randomNumber;
         System.out.println("Количество занятых мест в вагоне = "+totalOccupiedPlaces);
         if((totalPlaces-totalOccupiedPlaces)!=0) {
             if ((totalPlaces - totalOccupiedPlaces) <= (totalPlaces - seatingCapacity)) {
